@@ -1,0 +1,15 @@
+<h4 class="result-title" ng-class="{ failed: !validator.isValid }">Test Results</h4>
+
+<ul class="test-results">
+  <li ng-repeat="item in validator.details | filter: { result: false }" class="result-item result-failed">
+    &#10004; <span>{{ item.rule.title() }}</span>
+
+    <div class="well well-sm" ng-bind-html="item.rule.info() | md"></div>
+  </li>
+</ul>
+
+<ul class="test-results">
+  <li ng-repeat="item in validator.details | filter: { result: true }" class="result-item result-passed">
+    &#10004; <span>{{ item.rule.title() }}</span>
+  </li>
+</ul>

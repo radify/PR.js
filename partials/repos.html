@@ -1,0 +1,5 @@
+<ul class="nav nav-pills nav-stacked" role="navigation">
+  <li ng-repeat="repo in repos" ui-sref-active="active" role="presentation">
+    <a ui-sref="main.org.repo({ repo: repo.name })" title="{{ repo.name }}" class="repo">{{ repo.name }}</a>
+  </li>
+</ul>

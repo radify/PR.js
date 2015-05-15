@@ -1,0 +1,18 @@
+<div class="row owner">
+  <h2 class="title">
+    <img ng-src="{{ owner.avatar_url }}" />
+    <a ng-href="{{ owner.html_url }}">{{ owner.login }}</a>
+  </h2>
+</div>
+
+<div class="row top">
+  <div class="col repos"><div class="col-body" ui-view="repos"></div></div>
+  <div class="col pulls"><div class="col-body" ui-view="pulls"></div></div>
+  <div class="col pull"><div class="col-body" ui-view="pull"></div></div>
+</div>
+
+<div class="row bottom">
+  <div class="well well-lg results" ui-view="results">
+    <p class="lead note">Select a project and pull request above</p>
+  </div>
+</div>

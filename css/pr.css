@@ -1,0 +1,178 @@
+html, body, .container-fluid {
+  height: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.row.top {
+  height: 40%;
+  overflow: hidden;
+}
+
+.row.bottom {
+  height: 50%;
+  overflow: hidden;
+}
+
+.col {
+  float: left;
+  width: 33%;
+  height: 100%;
+  overflow: auto;
+}
+
+.col.repos {
+  width: 20%;
+}
+
+.col.pulls {
+  width: 35%;
+}
+
+.col.pull {
+  width: 45%;
+}
+
+.col-body {
+  margin: 5px;
+  overflow: auto;
+}
+
+.repo {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: left;
+}
+
+.results {
+  margin: 1%;
+  height: 92%;
+  overflow: auto;
+}
+
+.note {
+  font-style: italic;
+  color: #999;
+}
+
+.owner {
+  height: 50px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.owner .title {
+  margin: 5px;
+}
+
+.owner img {
+  max-height: 40px;
+  vertical-align: middle;
+}
+
+.pull p {
+  display: inline;
+  padding: 1px;
+  margin: 0;
+}
+
+.pull .title {
+  line-height: 130%;
+  min-height: 40px;
+}
+
+.avatar {
+  float: left;
+  margin-right: 10px;
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.search {
+  padding: 4px;
+  width: 300px;
+}
+
+.result-title {
+  margin: 0 0 15px 0;
+  padding: 5px 10px;
+  /*background: #5e7d00;*/
+  background: rgb(150, 195, 150);
+  color: #eee;
+}
+.result-title.failed {
+  background: rgb(215, 100, 100);
+  color: #fff;
+}
+
+.test-results {
+  list-style-type: none;
+  padding-left: 5px;
+}
+
+.test-results li {
+  padding-right: 5px;
+}
+
+.result-item {
+  padding: 0 0 10px 8px;
+}
+
+.result-item span {
+  position: relative;
+}
+
+.result-item.result-passed {
+  color: darkgreen;
+}
+.result-item.result-failed {
+  color: darkred;
+}
+
+.result-item .well {
+  margin-top: 4px;
+}
+
+.result-item .well p {
+  margin-bottom: 1px;
+}
+
+.result-item.result-failed .well {
+  border-color: rgba(135, 80, 80, 0.3);
+  background: rgb(255, 242, 242);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 25px;
+  margin-top: -25px;
+  opacity: 0.4;
+  transition: opacity 0.25s ease-out;
+  -webkit-transition: opacity 0.25s ease-out;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+footer img {
+  height: 25px;
+  vertical-align: middle;
+}
+
+footer a {
+  color: #999;
+  font-style: italic;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #003366;
+  text-decoration: none;
+}

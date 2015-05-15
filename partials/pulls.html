@@ -1,0 +1,14 @@
+<ul class="nav nav-pills nav-stacked" role="navigation">
+
+  <li ng-show="!pulls" class="lead note">Select a project to view pull requests</li>
+  <li ng-show="pulls.length === 0" class="lead note">No open pull requests</li>
+
+  <li ng-repeat="pull in pulls" class="pull" ui-sref-active="active">
+    <a ui-sref="main.org.repo.pull({ id: pull.number })">
+      <!-- <span class="pull-right" ng-bind-html="pull.valid | valid"></span> -->
+      <strong>#{{ pull.number }}</strong>
+      <span ng-bind-html="pull.title | md"></span>
+    </a>
+  </li>
+
+</ul>
