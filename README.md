@@ -8,6 +8,8 @@ _Simple validation for pull request workflows_
 
 Most projects have rules of some kind about how to submit pull requests, which often include things like commit message formatting, squashing commits, etc. PR.js allows you to implement these rules as simple ES6 classes, using the GitHub API to check against open pull requests.
 
+![Screenshot](screenshot.png)
+
 ### Prior Art
 
  - [GitCop](https://gitcop.com/): Closed source, only validates commit messages based on a limited rule set
