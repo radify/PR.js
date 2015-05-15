@@ -14,9 +14,9 @@ import ValidatorController from "ui/ValidatorController";
 
 import states from "ui/states";
 
-var prjs = angular.module("prjs", ['ui.router'])
+var prjs = (angular.angular || angular).module("prjs", ['ui.router'])
   .config(($stateProvider) => {
-    angular.forEach(states, (state, name) => $stateProvider.state(name, state));
+    (angular.angular || angular).forEach(states, (state, name) => $stateProvider.state(name, state));
   })
   .run($state => $state.go("home"))
   .controller(RootController.name, RootController)

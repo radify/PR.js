@@ -11,7 +11,7 @@
   <script src="config.js"></script>
   <script>
     Promise.all(["angular", "pr"].map(System.import.bind(System))).then(function(modules) {
-      var prjs = modules[1].default, angular = modules[0];
+      var prjs = modules[1].default, angular = (modules[0].angular || modules[0]);
       angular.element(document).ready(function() { angular.bootstrap(document, [prjs.name]); });
     });
   </script>
