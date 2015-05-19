@@ -16,7 +16,12 @@ var config = {
   }
 };
 
-var resolve = (name) => ($http, $stateParams) => $http.get(config.url[name]($stateParams)).then(config.pipe[name]);
+var httpConf = (name, params) => [config.url[name](params), { cache: true }];
+
+var resolve = (name) => [
+  '$http', '$stateParams',
+  ($http, $stateParams) => $http.get(...httpConf(name, $stateParams)).then(config.pipe[name])
+];
 
 export default {
   "home": {
