@@ -1,16 +1,18 @@
-<h1>PR.js</h1>
+<div class="homeHeader container-fluid">
+	<h1>
+		<img src="/img/PRjs.svg" alt="PR.js">
+	</h1>
+	<p>Simple validation for pull request workflows</p>
+</div>
 
-<blockquote>Simple validation for pull request workflows</blockquote>
-
-<form>
-<p>
-  To use, type
-  <input
-    type="text"
-    class="search"
-    ng-model="search.name"
-    placeholder="the name of a user or organization on GitHub"
-  />
-  <button ng-click="search.go()">Go</button>
-</p>
+<form class="homeForm container-fluid">
+	<p>
+		<input
+			type="text"
+			class="search"
+			ng-model="search.name"
+			placeholder="Name of a user or organization on GitHub"
+		/>
+		<button ng-click="search.go()" class="start">Start <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+	</p>
 </form>

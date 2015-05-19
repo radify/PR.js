@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html ng-controller="RootController as root">
 <head>
-  <meta charset="utf-8">
-  <title ng-bind="root.title"></title>
+	<meta charset="utf-8">
+	<title ng-bind="root.title"></title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/pr.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/pr.css" />
 
-  <script src="jspm_packages/system.js"></script>
-  <script src="config.js"></script>
-  <script>
-    Promise.all(["angular", "pr"].map(System.import.bind(System))).then(function(modules) {
-      var prjs = modules[1].default, angular = (modules[0].angular || modules[0]);
-      angular.element(document).ready(function() { angular.bootstrap(document, [prjs.name]); });
-    });
-  </script>
+	<script src="jspm_packages/system.js"></script>
+	<script src="config.js"></script>
+	<script>
+	Promise.all(["angular", "pr"].map(System.import.bind(System))).then(function(modules) {
+	var prjs = modules[1].default, angular = (modules[0].angular || modules[0]);
+	angular.element(document).ready(function() { angular.bootstrap(document, [prjs.name]); });
+	});
+	</script>
 </head>
 <body>
 
-  <div class="container-fluid" ui-view></div>
+	<div ui-view></div>
 
-  <footer>
-    <a href="https://github.com/radify/PR.js">GitHub</a> |
-    <a href="http://radify.io">
-      This product proudly hand-crafted by
-      <img src="https://pbs.twimg.com/profile_images/595576094838890496/aJGJ3RBo_normal.png" alt="Radify" />
-    </a>
-  </footer>
+	<footer>
+		<a href="https://github.com/radify/PR.js">GitHub</a>
+		<span> | </span>
+		<a href="http://radify.io">
+			Proudly hand-crafted by
+			<img src="/img/radify.svg" alt="Radify">
+		</a>
+	</footer>
 
 </body>
 </html>
