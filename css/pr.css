@@ -1,17 +1,15 @@
 html,
-body,
-.container-fluid {
+body {
   background: #e5eaed;
   color: #4a5154;
   min-height: 100%;
+  min-width: 320px;
   font-family: 'Open Sans', sans-serif;
-  padding: 0;
 }
 html,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 .row.top {
   height: 40%;
@@ -37,6 +35,13 @@ body {
   width: 45%;
 }
 .col-body {
+  background: rgba(255, 255, 255, 0.025);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   margin: 5px;
   overflow: auto;
 }
@@ -56,14 +61,38 @@ body {
   color: #999;
 }
 .owner {
-  height: 50px;
-  border-bottom: 1px solid #e0e0e0;
+  background: #fff;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 .owner .title {
-  margin: 5px;
+  display: inline;
+}
+.owner .title a {
+  color: #787f82;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+.owner .title a img {
+  margin-right: 10px;
+  opacity: .8;
+}
+.owner .title a:hover,
+.owner .title a:focus {
+  color: #4a5154;
+  text-decoration: none;
+}
+.owner .title a:hover img,
+.owner .title a:focus img {
+  opacity: 1;
 }
 .owner img {
-  max-height: 40px;
+  max-height: 51px;
   vertical-align: middle;
 }
 .pull p {
@@ -90,14 +119,14 @@ div.homeHeader {
   text-align: center;
 }
 div.homeHeader h1 {
-  margin: 8.5% auto 6%;
+  margin: 42px auto 30px;
   max-width: 230px;
 }
 div.homeHeader p {
   color: #787f82;
   font-size: 32px;
   font-weight: 300;
-  margin-bottom: 6%;
+  margin-bottom: 30px;
 }
 form.homeForm {
   margin: 8.5% 0;
@@ -113,7 +142,7 @@ form.homeForm input.search {
   background-clip: padding-box;
   border: none;
   box-shadow: 0 0 0 1px #c9ccce;
-  font-size: 24px;
+  font-size: 18px;
   max-width: 600px;
   padding: 16px 24px;
   width: 100%;
@@ -160,7 +189,7 @@ form.homeForm button.start {
   display: block;
   font-size: 24px;
   font-weight: 600;
-  margin: 2% auto;
+  margin: 40px auto;
   padding: 12px 0;
   width: 230px;
   -webkit-transition: all 0.3s linear;
@@ -185,11 +214,21 @@ form.homeForm button.start:hover span.glyphicon,
 form.homeForm button.start:focus span.glyphicon {
   margin-left: 10px;
 }
+div.top {
+  zoom: 1;
+}
+div.top:before,
+div.top:after {
+  content: "";
+  display: table;
+}
+div.top:after {
+  clear: both;
+}
 .result-title {
   margin: 0 0 15px 0;
   padding: 5px 10px;
   /*background: #5e7d00;*/
-
   background: #96c396;
   color: #eee;
 }
@@ -234,7 +273,7 @@ footer {
   margin-top: -25px;
   opacity: 0.8;
   padding: 10px 0 8px;
-  text-align: right;
+  text-align: center;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
@@ -252,6 +291,7 @@ footer a {
   color: #8b9194;
   font-size: 14px;
   font-weight: 400;
+  display: block;
   opacity: .8;
   padding: 0 8px;
   text-decoration: none;
@@ -261,4 +301,25 @@ footer a:hover {
   color: #595e60;
   opacity: 1;
   text-decoration: none;
+}
+footer span {
+  display: none;
+}
+@media only screen and (min-width: 530px) {
+  div.homeHeader h1 {
+    margin: 8.5% auto 6%;
+  }
+  div.homeHeader p {
+    margin-bottom: 6%;
+  }
+  form.homeForm input.search {
+    font-size: 24px;
+  }
+  footer {
+    text-align: right;
+  }
+  footer a,
+  footer span {
+    display: inline;
+  }
 }
