@@ -10,9 +10,11 @@ Most projects have rules of some kind about how to submit pull requests, which o
 
 ![Screenshot](screenshot.png)
 
+
 ### Prior Art
 
  - [GitCop](https://gitcop.com/): Closed source, only validates commit messages based on a limited rule set
+ - [Commitizen](http://commitizen.github.io/cz-cli/): Open source, validates commit messages at commit time using a limited rule set, requires local install, requires committer and repo opt-in, not PRs.
  - [Rolling your own](http://addamhardy.com/blog/2013/06/05/good-commit-messages-and-enforcing-them-with-git-hooks/): more flexibility; more work; access to local system; requires local installation; for commits, not PRs
 
 
