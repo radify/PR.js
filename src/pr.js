@@ -18,7 +18,6 @@ var prjs = (angular.angular || angular).module("prjs", ['ui.router'])
   .config(['$stateProvider', ($stateProvider) => {
       (angular.angular || angular).forEach(states, (state, name) => $stateProvider.state(name, state));
     }])
-  .run(['$state', $state => $state.go("home")])
   .controller("RootController", RootController)
   .controller("SearchController", SearchController)
   .controller("ValidatorController", ValidatorController)
