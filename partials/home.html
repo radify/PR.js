@@ -1,18 +1,20 @@
-<div class="homeHeader container-fluid">
-	<h1>
-		<img src="/img/PRjs.svg" alt="PR.js">
-	</h1>
-	<p>Simple validation for pull request workflows</p>
+<div class="home">
+	<div class="homeHeader container-fluid">
+		<h1>
+			<img src="/img/PRjs.svg" alt="PR.js">
+		</h1>
+		<p>Simple validation for pull request workflows</p>
+	</div>
+	
+	<form class="homeForm container-fluid">
+		<p>
+			<input
+				type="text"
+				class="search"
+				ng-model="search.name"
+				placeholder="Name of a user or organization on GitHub"
+			/>
+			<button ng-click="search.go()" class="start">Start <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+		</p>
+	</form>
 </div>
-
-<form class="homeForm container-fluid">
-	<p>
-		<input
-			type="text"
-			class="search"
-			ng-model="search.name"
-			placeholder="Name of a user or organization on GitHub"
-		/>
-		<button ng-click="search.go()" class="start">Start <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
-	</p>
-</form>

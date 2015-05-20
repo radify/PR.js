@@ -199,6 +199,13 @@ h4 {
   background: #76bf59;
   color: #fff;
 }
+div.home {
+  height: 100%;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 div.homeHeader {
   background: #fff;
   text-align: center;
@@ -437,6 +444,28 @@ footer span {
   }
   div.homeHeader p {
     margin-bottom: 6%;
+  }
+  form.homeForm input.search {
+    font-size: 24px;
+  }
+  footer {
+    text-align: right;
+  }
+  footer a,
+  footer span {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 1420px) {
+  div.homeHeader h1 {
+    margin: 118px auto 84px;
+  }
+  div.homeHeader p {
+    margin-bottom: 84px;
+  }
+  form.homeForm {
+    margin-bottom: 84px;
+    margin-top: 84px;
   }
   form.homeForm input.search {
     font-size: 24px;
