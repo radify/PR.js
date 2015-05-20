@@ -11,7 +11,9 @@
     "gulp-connect": "^2.2.0"
   },
   "jspm": {
-    "directories": {},
+    "directories": {
+      "baseURL": "src"
+    },
     "dependencies": {
       "marked": "npm:marked@^0.3.3"
     },
