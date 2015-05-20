@@ -21,7 +21,6 @@
   <script src="build.min.js"></script>
   <script>angular.element(document).ready(function() { angular.bootstrap(document, ["prjs"]); });</script>
 
-
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -45,6 +44,41 @@
       <img src="/img/radify.svg" alt="Radify">
     </a>
   </footer>
+
+  <script type="text/ng-template" id="partials/home.html">
+    <div class="home"><div class="homeHeader container-fluid"><h1><img src="/img/PRjs.svg" alt="PR.js"></h1><p>Simple validation for pull request workflows</p></div>
+
+    <form class="homeForm container-fluid">
+    <p><input type="text" class="search" ng-model="search.name" placeholder="Name of a user or organization on GitHub" /><button ng-click="search.go()" class="start">Start <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button></p>
+    </form>
+    </div>
+  </script>
+
+  <script type="text/ng-template" id="partials/layout.html">
+    <div class="owner">
+    <h2 class="title"><a ng-href="{{ owner.html_url }}"><img ng-src="{{ owner.avatar_url }}" /> {{ owner.login }}</a></h2>
+    <div class="headerLogo"><img src="/img/PRjs.svg" alt="PR.js"></div>
+    </div>
+
+    <div class="top"><div class="col repos"><div class="col-body" ui-view="repos"></div></div><div class="col pulls"><div class="col-body" ui-view="pulls"></div></div><div class="col pull"><div class="col-body" ui-view="pull"></div></div></div>
+
+    <div class="bottom"><div class="well well-lg results" ui-view="results"><p class="lead note">Select a project and pull request above</p></div>
+    </div>
+  </script>
+
+  <script type="text/ng-template" id="partials/pull.html">
+    <h4 class="pull title"><a ng-href="{{ pull.user.html_url }}"><img ng-src="{{ pull.user.avatar_url }}" alt="{{ pull.user.login }}" class="avatar" /></a><span ng-bind-html="pull.title | md"></span></h4>
+    <div class="well well-sm pull" ng-bind-html="pull.body | md"></div>
+    <div class="pull-right"><a ng-href="{{ pull.html_url }}" class="btn btn-default">View &#10132;</a></div>
+  </script>
+
+  <script type="text/ng-template" id="partials/pulls.html">
+  <ul class="nav nav-pills nav-stacked" role="navigation">
+  <li ng-show="!pulls" class="lead note">Select a project to view pull requests</li>
+  <li ng-show="pulls.length === 0" class="lead note">No open pull requests</li>
+  <li ng-repeat="pull in pulls" class="pull" ui-sref-active="active"><a ui-sref="main.org.repo.pull({ id: pull.number })"><!-- <span class="pull-right" ng-bind-html="pull.valid | valid"></span> --><strong>#{{ pull.number }}</strong><span ng-bind-html="pull.title | md"></span></a></li>
+  </ul>
+  </script>
 
   <script type="text/ng-template" id="partials/home.html">
     <div class="home"><div class="homeHeader container-fluid"><h1><img src="/img/PRjs.svg" alt="PR.js"></h1><p>Simple validation for pull request workflows</p></div>
