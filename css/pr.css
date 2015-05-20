@@ -3,14 +3,12 @@ body {
   background: #e5eaed;
   color: #4a5154;
   font-family: 'Open Sans', sans-serif;
-  min-width: 320px;
-  padding-bottom: 30px;
-  position: relative;
-}
-html,
-body {
+  height: 100%;
   margin: 0;
+  min-width: 320px;
+  overflow: hidden;
   padding: 0;
+  position: relative;
 }
 .row.top {
   height: 40%;
@@ -22,14 +20,17 @@ body {
 }
 .col {
   float: left;
-  width: 33%;
-  padding-top: 30px;
+  height: 100%;
   overflow: auto;
+  padding: 0 10px;
+  width: 33%;
 }
 .col.repos {
+  border-right: 2px solid #fff;
   width: 20%;
 }
 .col.pulls {
+  border-right: 2px solid #fff;
   width: 35%;
 }
 .col.pull {
@@ -46,7 +47,7 @@ body {
   text-align: left;
 }
 .results {
-  margin: 1%;
+  margin: 15px;
   height: 92%;
   overflow: auto;
 }
@@ -324,8 +325,13 @@ ul.nav-pills a:active {
   box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, 0.15);
 }
 div.top {
+  bottom: 310px;
   zoom: 1;
-  padding: 0 10px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 130px;
+  width: 100%;
 }
 div.top:before,
 div.top:after {
@@ -334,6 +340,9 @@ div.top:after {
 }
 div.top:after {
   clear: both;
+}
+div.topWrapper {
+  height: 75%;
 }
 .result-title {
   margin: 0 0 15px 0;
@@ -376,10 +385,15 @@ div.top:after {
   background: #f6f6f6;
 }
 div.bottom {
-  padding-bottom: 40px;
+  bottom: 50px;
+  height: 250px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
 }
 footer {
   background: #d5dadd;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   position: fixed;
   bottom: 0;
   right: 0;

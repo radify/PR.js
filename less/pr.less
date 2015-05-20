@@ -81,14 +81,12 @@ html, body {
 	background: @baseBG;
 	color: @charcoal;
 	font-family: 'Open Sans', sans-serif;
-	min-width: 320px;
-	padding-bottom: 30px;
-	position: relative;
-}
-
-html, body {
+	height: 100%;
 	margin: 0;
+	min-width: 320px;
+	overflow: hidden;
 	padding: 0;
+	position: relative;
 }
 
 .row.top {
@@ -103,17 +101,19 @@ html, body {
 
 .col {
 	float: left;
-	width: 33%;
-//	height: 100%;
-	padding-top: 30px;
+	height: 100%;
 	overflow: auto;
+	padding: 0 10px;
+	width: 33%;
 }
 
 .col.repos {
+	border-right: 2px solid #fff;
 	width: 20%;
 }
 
 .col.pulls {
+	border-right: 2px solid #fff;
 	width: 35%;
 }
 
@@ -134,7 +134,7 @@ html, body {
 }
 
 .results {
-	margin: 1%;
+	margin: 15px;
 	height: 92%;
 	overflow: auto;
 }
@@ -400,8 +400,17 @@ ul.nav-pills {
 
 
 div.top {
+	bottom: 310px;
 	.clearfix;
-	padding: 0 10px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	top: 130px;
+	width: 100%;
+}
+
+div.topWrapper {
+	height: 75%;
 }
 
 .result-title {
@@ -455,7 +464,11 @@ div.top {
 
 
 div.bottom {
-	padding-bottom: 40px;
+	bottom: 50px;
+	height: 250px;
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
 }
 
 
@@ -464,6 +477,7 @@ div.bottom {
 
 footer {
 	background: #d5dadd;
+	border-top: 1px solid rgba(0,0,0,.1);
 	position: fixed;
 	bottom: 0;
 	right: 0;
