@@ -1,5 +1,5 @@
 import angular  from "angular";
-import uiRouter from "uiRouter";
+import uiRouter from "angular-ui-router";
 import marked   from "marked";
 
 import Validator from "Validator";
@@ -15,15 +15,15 @@ import ValidatorController from "ui/ValidatorController";
 import states from "ui/states";
 
 var prjs = (angular.angular || angular).module("prjs", ['ui.router'])
-  .config(($stateProvider) => {
-    (angular.angular || angular).forEach(states, (state, name) => $stateProvider.state(name, state));
-  })
-  .run($state => $state.go("home"))
-  .controller(RootController.name, RootController)
-  .controller(SearchController.name, SearchController)
-  .controller(ValidatorController.name, ValidatorController)
-  .filter("md", $sce => { return (text, opts) => $sce.trustAsHtml(marked(text, opts || {})); })
-  .filter("valid", $sce => { return (val) => $sce.trustAsHtml((val && '&#10004;') || '&#10008;'); })
+  .config(['$stateProvider', ($stateProvider) => {
+      (angular.angular || angular).forEach(states, (state, name) => $stateProvider.state(name, state));
+    }])
+  .run(['$state', $state => $state.go("home")])
+  .controller("RootController", RootController)
+  .controller("SearchController", SearchController)
+  .controller("ValidatorController", ValidatorController)
+  .filter("md", ['$sce', $sce => { return (text, opts) => $sce.trustAsHtml(marked(text, opts || {})); }])
+  .filter("valid", ['$sce', $sce => { return (val) => $sce.trustAsHtml((val && '&#10004;') || '&#10008;'); }])
   .provider("validator", () => {
     let inst = new Validator([
       new HasSubject(),
@@ -33,6 +33,6 @@ var prjs = (angular.angular || angular).module("prjs", ['ui.router'])
     ]);
     return { $get: () => inst };
   })
-  .run($rootScope => $rootScope.$on("$stateChangeError", console.log.bind(console)));
+  .run(['$rootScope', $rootScope => $rootScope.$on("$stateChangeError", console.log.bind(console))]);
 
 export default prjs;
