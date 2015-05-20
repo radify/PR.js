@@ -3,8 +3,8 @@ body {
   background: #e5eaed;
   color: #4a5154;
   font-family: 'Open Sans', sans-serif;
-  height: 100%;
   min-width: 320px;
+  padding-bottom: 30px;
   position: relative;
 }
 html,
@@ -180,6 +180,9 @@ h4 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
+}
+.well img {
+  max-width: 100%;
 }
 .btn {
   background: #94cd7e;
@@ -377,7 +380,7 @@ div.bottom {
 }
 footer {
   background: #d5dadd;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   opacity: 0.8;

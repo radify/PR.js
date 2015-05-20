@@ -81,8 +81,8 @@ html, body {
 	background: @baseBG;
 	color: @charcoal;
 	font-family: 'Open Sans', sans-serif;
-	height: 100%;
 	min-width: 320px;
+	padding-bottom: 30px;
 	position: relative;
 }
 
@@ -253,6 +253,9 @@ h4 {
 		position: absolute;
 		width: 16px;
 		.transform(rotate(45deg));
+	}
+	img {
+		max-width: 100%;
 	}
 }
 
@@ -461,7 +464,7 @@ div.bottom {
 
 footer {
 	background: #d5dadd;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	right: 0;
 	opacity: 0.8;
