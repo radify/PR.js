@@ -8,7 +8,7 @@ _Programatically validate pull requests against the [contribution gudelines](htt
 
 Most projects have rules of some kind about how to submit pull requests, which often include things like commit message formatting, squashing commits, etc. PR.js allows you to implement these rules as simple ES6 classes, using the GitHub API to check against open pull requests.
 
-![Screenshot](screenshot.png)
+![Screenshots](screenshots.png)
 
 
 ### Prior Art
