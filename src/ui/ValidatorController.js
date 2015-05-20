@@ -17,3 +17,5 @@ export default class ValidatorController {
     });
   }
 }
+
+ValidatorController.$inject = ['validator', 'pull'];

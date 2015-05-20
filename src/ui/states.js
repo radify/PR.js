@@ -18,10 +18,7 @@ var config = {
 
 var httpConf = (name, params) => [config.url[name](params), { cache: true }];
 
-var resolve = (name) => [
-  '$http', '$stateParams',
-  ($http, $stateParams) => $http.get(...httpConf(name, $stateParams)).then(config.pipe[name])
-];
+var resolve = (name) => ['$http', '$stateParams', (h, p) => h.get(...httpConf(name, p)).then(config.pipe[name])];
 
 export default {
   "home": {
@@ -34,10 +31,12 @@ export default {
     url: "/{name}",
     resolve: {
       repos: resolve("repos"),
-      owner: (repos) => repos[0].owner
+      owner: ['repos', (repos) => repos[0].owner]
     },
     templateUrl: "partials/layout.html",
-    controller: ($scope, repos, owner) => Object.assign($scope, { repos, owner })
+    controller: ['$scope', 'repos', 'owner',
+      ($scope, repos, owner) => Object.assign($scope, { repos, owner })
+    ]
   },
   "main.org": {
     url: "",
@@ -58,7 +57,7 @@ export default {
     views: {
       "pulls@main": {
         templateUrl: "partials/pulls.html",
-        controller: ($scope, pulls) => Object.assign($scope, { pulls })
+        controller: ['$scope', 'pulls', ($scope, pulls) => Object.assign($scope, { pulls })]
       }
     }
   },
@@ -67,12 +66,12 @@ export default {
     resolve: {
       _pull:   resolve("pull"),
       commits: resolve("commits"),
-      pull:    (_pull, commits) => Object.assign(_pull, { commits })
+      pull:    ['_pull', 'commits', (_pull, commits) => Object.assign(_pull, { commits })]
     },
     views: {
       "pull@main": {
         templateUrl: "partials/pull.html",
-        controller: ($scope, pull) => Object.assign($scope, { pull })
+        controller: ['$scope', 'pull', ($scope, pull) => Object.assign($scope, { pull })]
       },
       "results@main": {
         templateUrl: "partials/results.html",
