@@ -9,7 +9,7 @@ System.config({
   "paths": {
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js",
-    "*Spec": "spec/*.js",
+    "*Spec": "../spec/*.js",
     "jasmineBoot": "https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/boot.js",
     "jasmineHtml": "https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine-html.js",
     "jasmine": "https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine.js",
