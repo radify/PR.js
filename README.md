@@ -1,6 +1,6 @@
 # PR.js
 
-_Programatically validate pull requests against the [contribution gudelines](https://help.github.com/articles/setting-guidelines-for-repository-contributors/)_
+_Programatically validate pull requests against the [contribution guidelines](https://help.github.com/articles/setting-guidelines-for-repository-contributors/)_
 
 ---
 
