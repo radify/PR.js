@@ -4,15 +4,43 @@
   "description": "Simple validation for pull request workflows",
   "main": "index.js",
   "scripts": {},
-  "author": "",
-  "license": "BSD",
+  "author": {
+    "name": "Radify, Inc.",
+    "email": "line@radify.io",
+    "url": "http://radify.io"
+  },
+  "contributors": [{
+    "name": "Nate Abele",
+    "email": "nate@radify.io",
+    "url": "http://radify.io"
+    }, {
+    "name": "Andrew Canham",
+    "email": "andrew@radify.io",
+    "url": "http://radify.io"
+  }],
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/radify/PR.js"
+  },
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "github",
+    "pullrequest",
+    "validation",
+    "git"
+  ],
+  "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-babel": "^5.1.0",
-    "gulp-concat": "^2.5.2",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
+    "gulp-concat": "^2.6.0",
     "gulp-connect": "^2.2.0",
     "gulp-uglify": "^1.2.0"
   },
+  "bugs": {
+    "url": "https://github.com/radify/PR.js/issues"
+  },
+  "homepage": "https://github.com/radify/PR.js",
   "jspm": {
     "directories": {
       "baseURL": "src"
