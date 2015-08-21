@@ -7,19 +7,21 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/pr.css" />
 
-  <!--
-  <script src="src/jspm_packages/system.js"></script>
+  <!-- Begin dev config -->
+  <script src="src/jspm_packages/system.src.js"></script>
   <script src="src/config.js"></script>
   <script>
-    Promise.all(["angular", "pr"].map(System.import.bind(System))).then(function(modules) {
+    Promise.all([System.import("angular"), System.import("pr")]).then(function(modules) {
       var prjs = modules[1].default, angular = (modules[0].angular || modules[0]);
       angular.element(document).ready(function() { angular.bootstrap(document, [prjs.name]); });
     });
   </script>
-  -->
+  <!-- End dev config -->
 
+  <!-- Begin prod config
   <script src="build.min.js"></script>
   <script>angular.element(document).ready(function() { angular.bootstrap(document, ["prjs"]); });</script>
+  End prod config -->
 </head>
 <body>
 

@@ -16,9 +16,9 @@ import states from "ui/states";
 
 var prjs = (angular.angular || angular).module("prjs", ['ui.router'])
   .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
-      (angular.angular || angular).forEach(states, (state, name) => $stateProvider.state(name, state));
-      $urlRouterProvider.otherwise('/');
-    }])
+    (angular.angular || angular).forEach(states, (state, name) => $stateProvider.state(name, state));
+    $urlRouterProvider.otherwise('/');
+  }])
   .controller("RootController", RootController)
   .controller("SearchController", SearchController)
   .controller("ValidatorController", ValidatorController)

@@ -26,6 +26,12 @@ Most projects have rules of some kind about how to submit pull requests, which o
  - `gulp serve`
  - [`http://localhost:3003`](http://localhost:3003)
 
+### Going to Production
+
+ - `jspm bundle-sfx --minify pr.js build.min.js`
+ - Comment out the `<!-- dev config -->` block in `index.html`
+ - Uncomment the `<!-- prod config -->` block in `index.html`
+
 **Test**
 
  - [`http://localhost:3003/test.html`](http://localhost:3003/test.html)
