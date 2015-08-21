@@ -8,7 +8,7 @@ gulp.task('serve', function() {
   connect.server({
     root: global.paths.index,
     port: 3003,
-    livereload: false
+    livereload: true
   });
 
   console.log("Demo server started at localhost:3003");
