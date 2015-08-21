@@ -2,8 +2,10 @@
   "name": "pr.js",
   "version": "0.1.1",
   "description": "Simple validation for pull request workflows",
-  "main": "index.js",
-  "scripts": {},
+  "main": "index.html",
+  "scripts": {
+    "build": "jspm bundle-sfx pr.js build.min.js --minify"
+  },
   "author": {
     "name": "Radify, Inc.",
     "email": "line@radify.io",
