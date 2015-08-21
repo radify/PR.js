@@ -23,6 +23,7 @@ Most projects have rules of some kind about how to submit pull requests, which o
  - `npm install -g gulp jspm`
  - `npm install`
  - [`jspm`](http://jspm.io/) `install`
+ - `jspm bundle-sfx --minify pr.js build.min.js`
  - `gulp serve`
  - [`http://localhost:3003`](http://localhost:3003)
 
