@@ -1,2 +1,6 @@
 node_modules/*
 src/jspm_packages/*
+
+# TODO: Remove
+build.min.js
+build.min.js.map
