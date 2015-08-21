@@ -9,18 +9,21 @@
     "email": "line@radify.io",
     "url": "http://radify.io"
   },
-  "contributors": [{
-    "name": "Nate Abele",
-    "email": "nate@radify.io",
-    "url": "http://radify.io"
-  }, {
-    "name": "Andrew Canham",
-    "email": "andrew@radify.io",
-    "url": "http://radify.io"
-  }],
+  "contributors": [
+    {
+      "name": "Nate Abele",
+      "email": "nate@radify.io",
+      "url": "http://radify.io"
+    },
+    {
+      "name": "Andrew Canham",
+      "email": "andrew@radify.io",
+      "url": "http://radify.io"
+    }
+  ],
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/radify/PR.js"
+    "type": "git",
+    "url": "git+https://github.com/radify/PR.js"
   },
   "license": "BSD-3-Clause",
   "keywords": [
