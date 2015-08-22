@@ -15,6 +15,8 @@ var gulp = require('gulp');
 var requireDir = require('require-dir');
 
 global.paths = {
+  // CSS sources
+  'css': './css/*',
   // Distribution folder.
   'dist': './dist',
   // Image sources.
