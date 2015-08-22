@@ -5,7 +5,7 @@ var exec   = require('child_process').execSync;
 var runSeq = require('run-sequence');
 
 gulp.task('build', function(done) {
-  runSeq('buildjs', done);
+  runSeq('clean', ['buildjs'], done);
 });
 
 // Build JS for distribution.
