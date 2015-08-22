@@ -16,7 +16,11 @@ var requireDir = require('require-dir');
 
 global.paths = {
   // TODO: replace with ./src or ./build
-  'index': './'
+  'index': './',
+  // Sources folder.
+  'src': './src',
+  // Distribution folder.
+  'dist': './dist'
 };
 
 // Require all tasks in the 'gulp' folder.
