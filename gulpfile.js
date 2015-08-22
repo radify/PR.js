@@ -17,11 +17,12 @@ var requireDir = require('require-dir');
 global.paths = {
   // Distribution folder.
   'dist': './dist',
+  // Image sources.
+  'img': './img/*',
   // TODO: replace with ./src or ./build
   'index': './',
   // Sources folder.
   'src': './src'
-
 };
 
 // Require all tasks in the 'gulp' folder.
