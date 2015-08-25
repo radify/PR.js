@@ -1,4 +1,4 @@
-import Message from "parsers/Message";
+import Message from "../../src/parsers/Message";
 
 describe("parsers/Message", () => {
   it("should pull the first commit message from a PR, split into lines", () => {

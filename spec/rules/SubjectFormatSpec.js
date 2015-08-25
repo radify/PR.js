@@ -1,4 +1,4 @@
-import SubjectFormat from "rules/SubjectFormat";
+import SubjectFormat from "../../src/rules/SubjectFormat";
 
 describe("rules/SubjectFormat", () => {
 
