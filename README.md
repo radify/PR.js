@@ -36,7 +36,7 @@ Most projects have rules of some kind about how to submit pull requests, which o
 
 **Test**
 
- - [`http://localhost:3003/test.html`](http://localhost:3003/test.html)
+ - `gulp test`
 
 ### Roadmap
 
