@@ -24,7 +24,11 @@ global.paths = {
   // TODO: replace with ./src or ./build
   'index': './',
   // Sources folder.
-  'src': './src'
+  'src': './src',
+  // Specs folder.
+  'spec': './spec',
+  // Specs glob.
+  'specs': './spec/**/*Spec.js'
 };
 
 // Require all tasks in the 'gulp' folder.
