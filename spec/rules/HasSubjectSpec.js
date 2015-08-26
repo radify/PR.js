@@ -1,4 +1,4 @@
-import HasSubject from "rules/HasSubject";
+import HasSubject from "../../src/rules/HasSubject";
 
 describe("rules/HasSubject", () => {
 

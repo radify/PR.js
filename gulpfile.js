@@ -1,11 +1,38 @@
+'use strict';
+
+/*
+ * gulpfile.js
+ * ===========
+ * Rather than manage one giant configuration file responsible
+ * for creating multiple tasks, each task has been broken out into
+ * its own file in the 'gulp' folder. Any files in that directory get
+ *  automatically required below.
+ *
+ * To add a new task, simply add a new task file in that directory.
+ */
+
 var gulp = require('gulp');
-var conn = require('gulp-connect');
+var requireDir = require('require-dir');
 
-gulp.task('serve', function() {
-  conn.server({
-    root: __dirname,
-    port: 3003
-  });
+global.paths = {
+  // CSS sources
+  'css': './css/*',
+  // Distribution folder.
+  'dist': './dist',
+  // Image sources.
+  'img': './img/*',
+  // TODO: replace with ./src or ./build
+  'index': './',
+  // Sources folder.
+  'src': './src',
+  // Specs folder.
+  'spec': './spec',
+  // Specs glob.
+  'specs': './spec/**/*Spec.js'
+};
 
-  console.log("Demo server started at localhost:3003");
-});
+// Require all tasks in the 'gulp' folder.
+requireDir('./gulp', { recurse: false });
+
+// Default task; start local server.
+gulp.task('default', ['serve']);

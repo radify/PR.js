@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/radify/PR.js.svg)](https://travis-ci.org/radify/PR.js)
+
 # PR.js
 
 _Programatically validate pull requests against the [contribution guidelines](https://help.github.com/articles/setting-guidelines-for-repository-contributors/)_
@@ -34,7 +36,7 @@ Most projects have rules of some kind about how to submit pull requests, which o
 
 **Test**
 
- - [`http://localhost:3003/test.html`](http://localhost:3003/test.html)
+ - `gulp test`
 
 ### Roadmap
 

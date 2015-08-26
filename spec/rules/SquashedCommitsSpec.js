@@ -1,4 +1,4 @@
-import SquashedCommits from "rules/SquashedCommits";
+import SquashedCommits from "../../src/rules/SquashedCommits";
 
 describe("rules/SquashedCommits", () => {
 

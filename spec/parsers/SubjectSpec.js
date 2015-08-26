@@ -1,4 +1,4 @@
-import Subject from "parsers/Subject";
+import Subject from "../../src/parsers/Subject";
 
 describe("parsers/Subject", () => {
   it("should split valid subject lines into object hash", () => {
