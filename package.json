@@ -9,18 +9,21 @@
     "email": "line@radify.io",
     "url": "http://radify.io"
   },
-  "contributors": [{
-    "name": "Nate Abele",
-    "email": "nate@radify.io",
-    "url": "http://radify.io"
-  }, {
-    "name": "Andrew Canham",
-    "email": "andrew@radify.io",
-    "url": "http://radify.io"
-  }],
+  "contributors": [
+    {
+      "name": "Nate Abele",
+      "email": "nate@radify.io",
+      "url": "http://radify.io"
+    },
+    {
+      "name": "Andrew Canham",
+      "email": "andrew@radify.io",
+      "url": "http://radify.io"
+    }
+  ],
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/radify/PR.js"
+    "type": "git",
+    "url": "git+https://github.com/radify/PR.js"
   },
   "license": "BSD-3-Clause",
   "keywords": [
@@ -52,10 +55,9 @@
       "ramda": "npm:ramda@^0.14.0"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.1.13",
-      "babel-core": "npm:babel-core@^5.8.22",
-      "babel-runtime": "npm:babel-runtime@^5.1.13",
-      "core-js": "npm:core-js@^0.9.4"
+      "babel": "npm:babel-core@^5.8.22",
+      "babel-runtime": "npm:babel-runtime@^5.8.20",
+      "core-js": "npm:core-js@^1.1.0"
     }
   }
 }
