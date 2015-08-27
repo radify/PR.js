@@ -24,11 +24,15 @@ global.paths = {
   // TODO: replace with ./src or ./build
   'index': './',
   // Sources folder.
-  'src': './src'
+  'src': './src',
+  // Specs folder.
+  'spec': './spec',
+  // Specs glob.
+  'specs': './spec/**/*Spec.js'
 };
 
 // Require all tasks in the 'gulp' folder.
 requireDir('./gulp', { recurse: false });
 
-// Default task; start local server.
-gulp.task('default', ['serve']);
+// Default task; test & build
+gulp.task('default', ['test', 'build']);
