@@ -1,11 +1,13 @@
+env:
+  global:
+    secure: icqVmAGwiQ++yridEPAYByJ8qznw4iEc2dq8WYksSCF5Q3s9079sHUWJ2gDuCYGCACAatFKTwrixwUaNEmKOiF+mq0aITfrTfneksMnDPHM6m0I+4wQBZ7P4YStUoBYvThYuC6BjafoImH1C8MlUdZd1D18yIYlXUT06tIDzuD3azgLPM8UGNsCfskFDKnsW0hrl09LrK04+NNXHMhoiO0RW1W4mjhRMHPFij8IRLB/3D4wlV1xDt1jp0ddD96eX0PCx5hhfYbcm54ChcIOPo/gqrVQRT7OpvudDHfm0XLr9O4Dvhj/yawKRJL6nDBfoKHrOCdM9HxbIgmgYoWPu5E+17Gk2LVSnw4mdkJiWyaRN8mbSTMa7BEiEui9NtZddwHAyaZEMPw2ynPA+UgtET6HBcmEmXaCJc88Zgdwn4pzq9nNUXcqLvWbxL0GgMGjyOmTt5TvzYQ64MyNSv4txpPwQlalbiWti36vYS+3exg5YMyWbMnOU3CT5WIQtiKeEK9+Vojk2GyCHXAmhTAyq/Xd1ibg6PjnXqcK09auH2BPUxo/V6KfkoWowkldceGyM1tijELn+j5PcR3FgaPZ5NeX8MEoZzHE/g818o9Q9KOD9KuqklHM+mBsdLE/laFk4c9CBiEycA3k3mfbe8h1Slq6q87kX0EXzKUBBIoSy8Z4=
 language: node_js
-
 node_js:
-  - "0.12"
-
+- '0.12'
+before_install:
+- npm install -g jspm
+- jspm config registries.github.auth $RADIFY_JSPM_GITHUB_AUTH_TOKEN
 before_script:
-  - npm install
-  - jspm install
-
+- npm install
+- jspm install
 script: gulp
-
