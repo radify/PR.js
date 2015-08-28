@@ -1,6 +1,6 @@
-node_modules/*
-src/jspm_packages/*
-dist/*
+node_modules/
+src/jspm_packages/
+dist/
 
 # TODO: Remove
 build.min.js
