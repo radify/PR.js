@@ -214,6 +214,9 @@ div.homeHeader h1 {
   margin: 42px auto 30px;
   max-width: 230px;
 }
+div.homeHeader h1 img {
+  max-width: 230px;
+}
 div.homeHeader p {
   color: #787f82;
   font-size: 32px;
